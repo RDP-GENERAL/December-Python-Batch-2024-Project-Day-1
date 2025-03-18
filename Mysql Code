@@ -1,0 +1,20 @@
+Create database python_mysql_final_project_day_1;
+use python_mysql_final_project_day_1;
+
+CREATE TABLE customer_details (
+    cust_id INT AUTO_INCREMENT PRIMARY KEY, 
+    cust_full_name VARCHAR(255) NOT NULL,
+    cust_address TEXT,
+    cust_phone_number VARCHAR(15),
+    cust_user_name VARCHAR(50) NOT NULL,
+    cust_password VARCHAR(255) NOT NULL
+) AUTO_INCREMENT = 1;
+
+INSERT INTO customer_details (cust_full_name, cust_address, cust_phone_number, cust_user_name, cust_password)
+VALUES ('John Doe', '1234 Elm Street, Springfield, IL', '555-1234', 'johndoe', 'securepassword123');
+
+select * from customer_details;
+truncate table customer_details;
+
+select * from customer_details where cust_user_name='Raj123';
+select * from customer_details WHERE cust_user_name=Raj123
